@@ -8,9 +8,9 @@ The Interactive Game Labeler is a user-friendly program designed to assist in th
 
     - Upon running the script, use the LEFT and RIGHT arrow keys to navigate through the game screens.
 
-    - Click the TOP-LEFT CORNER of a button to mark its starting point.
+    - Click the TOP-LEFT CORNER of a button to mark its starting point and KEEP IT CLICKED.
 
-    - Click the BOTTOM-RIGHT CORNER of the same button to complete the labeling process.
+    - UNCLICK at the BOTTOM-RIGHT CORNER of the same button to complete the labeling process.
 
     - Repeat the process for all buttons on the current game screen.
 
