@@ -50,7 +50,6 @@ def draw_buttons(image_index):
             pygame.draw.rect(transparent_surface, blue_with_transparency, (0, 0, size[0], size[1]), 0)
             screen.blit(transparent_surface, (top_left, (button.bx - button.tx, button.ty - button.ty)))
 
-
     pygame.display.flip()
 
 #Click baten kordenatuak pasata, lortu kordenatuaren gainean dagoen botoia
