@@ -85,7 +85,7 @@ def get_type_of_button():
     return type_of_button
 
 # Specify image folder and load images
-image_folder = "images"
+image_folder = "joko1/images"
 image_list = load_images(image_folder)
 total_images = len(image_list)
 current_image_index = 0
@@ -117,7 +117,6 @@ while running:
     dbclock = pygame.time.Clock()
     for event in pygame.event.get():
         image_file = image_list[current_image_index][0]
-
         if event.type == pygame.QUIT:
             running = False
         elif event.type == pygame.MOUSEBUTTONDOWN:

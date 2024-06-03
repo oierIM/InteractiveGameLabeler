@@ -1,19 +1,10 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
-import json
-from labeler import json_path, image_path
+from http.server import HTTPServer, SimpleHTTPRequestHandler, test
+import sys
 
-app = Flask(__name__)
-CORS(app)
-
-@app.route('/json')
-def get_button_coordinates():
-    # Your code to generate the JSON response
-    with open(json_path, 'r') as f:
-        data = json.load(f)
-
-    response = jsonify(data)
-    return response
+class CORSRequestHandler (SimpleHTTPRequestHandler):
+    def end_headers (self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        SimpleHTTPRequestHandler.end_headers(self)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    test(CORSRequestHandler, HTTPServer, port=int(sys.argv[1]) if len(sys.argv) > 1 else 8000)
